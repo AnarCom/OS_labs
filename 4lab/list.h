@@ -3,8 +3,8 @@ typedef struct Node {
 	struct Node * next;
 } Node;
 
-void addNode(Node * node);
-Node * createNode(char * string);
-void addToNodeList(Node * node, char string);
-void deleteNode(Node * nodes);
-void deleteNodes(Node * nodes);
+void freeNode(Node* node);
+Node* createNode();
+Node* fillNode(char* line);
+void freeList(Node* head);
+void printList(Node* head);
