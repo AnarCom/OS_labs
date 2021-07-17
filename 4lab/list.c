@@ -43,12 +43,11 @@ void freeList(Node* head){
 
     Node* next = head->next;
     Node* savedNode = NULL;
-    while (nextNode != NULL){
+    while (next != NULL){
         savedNode = nextNode->nextNode;
         freeNode(nextNode);
         next = savedNode;
     }
-
     freeNode(head);
 }
 
