@@ -1,10 +1,13 @@
+#ifndef INC_4LAB_LIST_H
+#define INC_4LAB_LIST_H
 typedef struct Node {
-	char * data;
-	struct Node * next;
+    char * data;
+    struct Node * next;
 } Node;
 
-void freeNode(Node* node);
-Node* createNode();
-Node* fillNode(char* line);
-void freeList(Node* head);
-void printList(Node* head);
+Node *addNode(Node *node, char *str);
+
+void deleteNodes(Node *head);
+
+void printNodes(Node *head);
+#endif //INC_4LAB_LIST_H
